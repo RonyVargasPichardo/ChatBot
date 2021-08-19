@@ -1,12 +1,12 @@
-.barra-chat-plegable {
+.chat-bar-collapsible {
     position: fixed;
     bottom: 0;
     right: 50px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.plegable {
-    background-color: rgb(16, 131, 41);
+.collapsible {
+    background-color: rgba(5, 156, 18, 0.925);
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -15,12 +15,12 @@
     outline: none;
     font-size: 20px;
     border-radius: 10px 10px 0px 0px;
-    border: 3px solid rgb(226, 226, 226);
+    border: 3px solid rgba(32, 24, 56, 0.479);
     border-bottom: none;
 }
 
 
-.container {
+.content{
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
@@ -28,7 +28,7 @@
 }
 
 
-.bloque-chat-completo{
+.full-chat-block{
     width: 350px;
     background: white;
     text-align: center;
@@ -59,20 +59,20 @@
 }
 
 
-.chat-barra-entrada-bloque{
+.chat-bar-input-block {
     display: flex;
     float: left;
     box-sizing: border-box;
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    background-color: rgb(143, 155, 147);
+    background-color: rgb(21, 24, 22);
     /* border-radius: 10px 10px 0px 0px; */
     padding: 10px 0px 10px 10px;
 }
 
 
-.chat-barra-iconos {
+.chat-bar-icons {
     display: flex;
     justify-content: space-evenly;
     box-sizing: border-box;
@@ -87,7 +87,7 @@
 
 /* Chat bubbles */
 
- #userInput {
+#userInput {
     width: 75%;
 }
 
@@ -117,7 +117,7 @@
 .userText span {
     line-height: 1.5em;
     display: inline-block;
-    background: #5ca6fa;
+    background: #098614;
     padding: 10px;
     border-radius: 8px;
     border-bottom-right-radius: 2px;
@@ -161,17 +161,17 @@
 
 
 @media screen and (max-width:600px) {
-    .bloque-chat-completo {
+    .full-chat-block {
         width: 100%;
         border-radius: 0px;
     }
-    .barra-chat-plegable{
+    .chat-bar-collapsible{
         position: fixed;
         bottom: 0;
         right: 0;
         width: 100%;
     }
-    .plegable {
+    .collapsible{
         width: 100%;
         border: 0px;
         border-top: 3px solid white;
