@@ -10,7 +10,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
     <body>
-        <!--  -->
+        <!--espacio de la Barra de chat  -->
+        <div class="barra-chat-plegable">
+            <button id="chat-btn" type="button" class="plegable"> Habla con nosotros!
+                <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+            </button>
+
+            <div class="container">
+                <div class="bloque-chat-completo">
+                    <!-- container mensaje -->
+                    <div class="outer-container">
+                        <div class="chat-container">
+                            <!-- mensajes -->
+                            <div class="chatbox">
+                                <h5 id="chat-tiempo"></h5>
+                                <p id="comenzaraEnviarMensaje" class="botText"><span>Loading...</span></p>
+                            </div>
+
+                            <!-- cuadro de entrada del usuario -->
+                            <div class="chat-barra-entrada-bloque">
+                                <div id="userInput">
+                                    <input type="text" id="textInput" class="input-box" name="msg" placeholder="Toca 'Enter' para enviar un mensaje" >
+                                    <p></p>
+                                </div>
+
+                                <!-- iconos del input -->
+                                <div class="chat-barra-iconos">
+                                    <i id="chat-icon" style="color: rgb(36, 61, 25);" class="fa fa-fw fa-send" onclick="sendBtn()"></i>
+                                </div>
+
+                                <div id="chat-barra-inferior">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!--jquery -->
         <script src="./src/script/responses.js"></script>
