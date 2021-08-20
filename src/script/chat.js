@@ -37,8 +37,10 @@ function getTime() {
 
 //obtengo el primer mensaje del bot 
 function firstBotMessage() {
-    let firstMessage = "Bienvenido, soy un asistente robot, como te ayudo ?"
-    document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
+    let firstMessage = "Bienvenid@ a Inversores Wodtech, Que informaciones le gustaria saber ?";
+    document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + 
+    '</span></p>' + '<p class="botText"><span>Ubicacion</span><span>Horario</span></p>' + 
+    '<p class="botText"><span>Equipos y precios</span></p>' ;
 
     let time = getTime();
 
