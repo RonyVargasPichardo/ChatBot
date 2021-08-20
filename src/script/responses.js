@@ -10,7 +10,7 @@ let closing = ['Ok bye-bye','Bye-bye', "Te veo pronto",];
 let contact = ["Puede llamarnos al 829-840-3147", "comuniquese con nosotros al 829-840-3147",]
 
     //preguntas de bienvenida
-    if (input.includes('ubicacion') || input.includes('location') ||input.includes('lugar')||input.includes('ubicados')) {
+    if (input.includes('ubicacion') || input.includes('location') ||input.includes('lugar')||input.includes('ubicados')|| input.includes('ubicación')) {
         return `Estamos ubicados en la Francisco Henriquez y Carvajal #295 Villa Consuelo, Santo Domingo`;
     }
      else if (input.includes('horario')||input.includes('hora')||input.includes('tiempo') ||input.includes('cerrado')||input.includes('cerrados')) {
