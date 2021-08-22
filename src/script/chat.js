@@ -39,7 +39,7 @@ function getTime() {
 function firstBotMessage() {
     let firstMessage = "Bienvenid@ a Inversores Wodtech, Que informaciones le gustaria saber ?";
     document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + 
-    '</span></p>' + '<p class="botText"><span>Ubicacion</span><span>Horario</span></p>' + 
+    '</span></p>' + '<p class="botText"><span>Ubicación</span><span>Horarios</span><span>Contacto</span></p>' + 
     '<p class="botText"><span>Equipos y precios</span></p>' ;
 
     let time = getTime();

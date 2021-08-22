@@ -1,16 +1,23 @@
+
+
 function getBotResponse(input) {
 
-input = input.toLowerCase();
-let intro = ["Hola sea bienvenid@ a Inversores Wodtech en que podemos ayudarle","Bienvenido como le ayudamos ?"];
-let help = [ "si laboramos de lunes a viernes de 8 am a 5 pm y los sabados hasta las 1 pm","si estamos abierto de lunes a sabado",];
-let greetings = ["estoy bien gracias, como te ayudamos?", "muy bien, como te ayudamos?", "estoy excelente, como puedo ayudarte?",];
-let hobbies = ["Si, pase por nuestro local para ayudarle, si no esta cerca de la hora de cierre","Si, venga Aqui podemos ayudarle, verifique el dia y la hora antes de pasar",];
-let thank = ["No hay problema","De nada","siempre a la orden"];
-let closing = ['Ok bye-bye','Bye-bye', "Te veo pronto",];
-let contact = ["Puede llamarnos al 829-840-3147", "comuniquese con nosotros al 829-840-3147",]
+    const intro = ["Hola sea bienvenid@ a Inversores Wodtech en que podemos ayudarle","Bienvenido como le ayudamos ?"];
+    const help = [ "si laboramos de lunes a viernes de 8 am a 5 pm y los sabados hasta las 1 pm","si estamos abierto de lunes a sabado",];
+    const greetings = ["estoy bien gracias, como te ayudamos?", "muy bien, como te ayudamos?", "estoy excelente, como puedo ayudarte?",];
+    const hobbies = ["Si, pase por nuestro local para ayudarle, si no esta cerca de la hora de cierre","Si, venga Aqui podemos ayudarle, verifique el dia y la hora antes de pasar",];
+    const thank = ["No hay problema","De nada","siempre a la orden"];
+    const closing = ['Ok bye-bye','Bye-bye', "Te veo pronto",];
+    const contact = ["Puede llamarnos al 829-840-3147", "comuniquese con nosotros al 829-840-3147",]
+
+    /*<---    Quitar acentos    */
+    const removeAccents = str => str.normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+    input = removeAccents(input).toLowerCase();
+
+
 
     //preguntas de bienvenida
-    if (input.includes('ubicacion') || input.includes('location') ||input.includes('lugar')||input.includes('ubicados')|| input.includes('ubicación')) {
+    if (input.includes('ubicacion') || input.includes('location') ||input.includes('lugar')||input.includes('ubicados')) {
         return `Estamos ubicados en la Francisco Henriquez y Carvajal #295 Villa Consuelo, Santo Domingo`;
     }
      else if (input.includes('horario')||input.includes('hora')||input.includes('tiempo') ||input.includes('cerrado')||input.includes('cerrados')) {
@@ -50,7 +57,7 @@ let contact = ["Puede llamarnos al 829-840-3147", "comuniquese con nosotros al 8
         return finalresult;
     }
     if(input.includes('telefono')||input.includes('celular')||input.includes('numero')||input.includes('contacto')){
-        let finalresult = contact[Math.floor(Math.random() * closing.length)];
+        let finalresult = contact[Math.floor(Math.random() * contact.length)];
         return finalresult;
     }else{
         return 'Elabore una pregunta mas concreta por favor'
