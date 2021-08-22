@@ -225,7 +225,7 @@ footer{
 
 @media screen and (max-width: 768px){
 
-    p{
+    .main p{
         font-size: 130%;
     }
 
